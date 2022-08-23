@@ -1,9 +1,9 @@
-import { useState } from "react";
-import "./App.css";
+import { useState } from 'react';
+import './App.css';
 
 export default function App() {
   const [authenticated, setAuthenticated] = useState(false);
-  const [todoInput, setTodoInput] = useState("");
+  const [todoInput, setTodoInput] = useState('');
   const [todos, setTodos] = useState([]);
 
   const onSubmit = async (e) => {
@@ -20,7 +20,7 @@ export default function App() {
       ]);
     }, 500);
 
-    setTodoInput("");
+    setTodoInput('');
   };
 
   const toggleTodo = (id) => {
@@ -36,7 +36,7 @@ export default function App() {
     <>
       {!authenticated && (
         <>
-          <h1>Login</h1>
+          <h1>Login Login</h1>
           <button type="button" onClick={() => setAuthenticated(true)}>
             Click here to login
           </button>
@@ -65,7 +65,7 @@ export default function App() {
               return (
                 <li key={id} data-cy={`todo-${title}`}>
                   <label
-                    className={selected ? "todoText" : null}
+                    className={selected ? 'todoText' : null}
                     htmlFor={`todoToggle${id}`}
                   >
                     {title}
